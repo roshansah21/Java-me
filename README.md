@@ -1,6 +1,6 @@
 # Java-me
 
----------------------------------------------------------------------
+------------------------------------------------------------------------------------
 01. Print Hello in Java
 
 import java.util.*;
@@ -9,7 +9,7 @@ import java.util.*;
         System.out.println("Hello");
 }
 }
-------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 02. Sum of Two  number 
 
@@ -27,4 +27,48 @@ public class SumOfTwoNum {
 	}
 }
 
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+03. Program to Find Quotient and Remainder
+
+import java.util.Scanner;
+public class QueNrem {
+
+	public static void main(String[] args) {
+		int dvd,dir;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the dvd : ");
+		dvd = sc.nextInt();
+		System.out.println("Enter the dir : ");
+		dir = sc.nextInt();
+		int rem = dvd%dir;
+		int que = dvd/dir;
+		System.out.println("Remainder : "+rem+"\n"+"Quotient : "+que);
+	}
+}
+
+-----------------------------------------------------------------------------------------
+
+04. to Swap Two Numbers Without Using third variable
+import java.util.Scanner;
+public class SwapTwoNumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a,b;
+		System.out.println("Enter the value of a : ");
+		a = sc.nextInt();
+		System.out.println("Enter the value of b : ");
+	    b = sc.nextInt();
+		
+		// Logical part of this code !!
+		
+		a = a + b;
+		b = a - b;
+		a = a - b;
+		System.out.println("After swap : " +"\n"+a+"\n"+b);
+
+	}
+}
+
+--------------------------------------------------------------------------------------
+05. Find Size of int, float, double and char
