@@ -71,4 +71,31 @@ public class SwapTwoNumber {
 }
 
 --------------------------------------------------------------------------------------
-05. Find Size of int, float, double and char
+05. Chech Given character are Upper,Lower,special,Number
+
+public static void main(String[] args) {
+		char ch;
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the String : ");
+		ch = sc.next().charAt(0);
+	    
+	    // Logical part of this code !!
+	    
+	    if(ch>=65 && ch<=90) {
+	    	System.out.println("upper");
+	    }
+	    else if(ch >= 97 && ch <= 122) {
+	    	System.out.println("Lower");
+	    }
+	    else if(ch >= 48 && ch <= 57) {
+	    	System.out.println("Digit");
+	    }
+	    else
+	    {
+	    	System.out.println("Special");
+	    }
+	    
+	}
+
+------------------------------------------------
