@@ -98,4 +98,39 @@ public static void main(String[] args) {
 	    
 	}
 
-------------------------------------------------
+----------------------------------------------------------------
+                           ARRAYS
+			   
+1) sum Two(easy)
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+
+        HashMap <Integer,Integer> map = new HashMap();
+        // Fill this HashMap
+
+        for(int i = 0 ; i<nums.length;i++){
+            map.put(nums[i],i);
+        }
+
+        // Searching
+        for(int i = 0 ; i < nums.length ;i++){ // 2, 7, 11, 15  target = 9
+            int num = nums[i]; // 2
+            int rem = target -  num; // remaining value 9 - 2 = 7
+            if(map.containsKey(rem)){
+                int index = map.get(rem);
+                if(index==i)continue;
+                return new int[]{i,index};
+
+            }
+        }
+        return new int[]{};
+
+        
+    }
+}
+
+
+
+
+
