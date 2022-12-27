@@ -157,3 +157,34 @@ class Solution {
 
 
 
+
+
+
+
+
+
+-------------------------------------------------------------------------
+
+
+CHECK GRAPH IS CYCLIC OR NOT
+
+
+def is_cyclic(graph):
+    visited = set()  
+    for vertex in graph:
+        if vertex not in visited:
+            if dfs(graph, vertex, visited, -1):
+                return True
+    return False
+
+def dfs(graph, vertex, visited, parent):
+    visited.add(vertex)
+    for neighbor in graph[vertex]:
+        if neighbor not in visited:
+            if dfs(graph, neighbor, visited, vertex):
+                return True
+        elif neighbor != parent:
+            return True
+    return False
+graph = {1: [1, -1], 2: [2, 1], 3: [3, 1],4: [],5:[5,2],6: [],7:[7,5]}
+print(is_cyclic(graph))
